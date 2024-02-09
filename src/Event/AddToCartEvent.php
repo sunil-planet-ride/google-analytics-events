@@ -21,15 +21,15 @@ class AddToCartEvent extends GenericEvent implements ItemsAware
 
     public static function getName(): string
     {
-        return 'add_to_cart';
+        return 'addToCart';
     }
 
     protected function getParameterMapping(): array
     {
-        return [
-            'currency' => $this->currency,
-            'value' => $this->value,
-            'items' => $this->items,
-        ];
+        return array(
+            'currencyCode' => 'EUR',
+            'add' => '',
+            'products' => $this->items
+        );
     }
 }
