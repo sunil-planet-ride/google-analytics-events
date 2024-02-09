@@ -11,7 +11,7 @@ use Setono\GoogleAnalyticsEvents\Event\Traits\HasValue;
 
 class RemoveFromCartEvent extends GenericEvent implements ItemsAware
 {
-    public const NAME = 'remove_from_cart';
+    public const NAME = 'removeFromCart';
 
     use CreatesEmpty;
 
@@ -23,15 +23,15 @@ class RemoveFromCartEvent extends GenericEvent implements ItemsAware
 
     public static function getName(): string
     {
-        return 'remove_from_cart';
+        return 'removeFromCart';
     }
 
     protected function getParameterMapping(): array
     {
         return [
-            'currency' => $this->currency,
-            'value' => $this->value,
-            'items' => $this->items,
+            'remove'=>['products' => $this->items],
+            #'currency' => $this->currency,
+            #'value' => $this->value,
         ];
     }
 }
