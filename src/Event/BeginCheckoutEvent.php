@@ -24,16 +24,16 @@ class BeginCheckoutEvent extends GenericEvent implements ItemsAware
 
     public static function getName(): string
     {
-        return 'begin_checkout';
+        return 'checkout';
     }
 
     protected function getParameterMapping(): array
     {
         return [
-            'currency' => $this->currency,
-            'value' => $this->value,
-            'coupon' => $this->coupon,
-            'items' => $this->items,
+            'checkout'=>['actionField'=>['step'=>1],'products' => $this->items],
+            #'currency' => $this->currency,
+            #'value' => $this->value,
+            #'coupon' => $this->coupon,
         ];
     }
 }
