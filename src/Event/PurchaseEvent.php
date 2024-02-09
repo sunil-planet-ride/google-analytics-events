@@ -71,13 +71,7 @@ class PurchaseEvent extends GenericEvent implements ItemsAware
     protected function getParameterMapping(): array
     {
         return [
-            'currency' => $this->currency,
-            'transaction_id' => $this->transactionId,
-            'value' => $this->value,
-            'coupon' => $this->coupon,
-            'shipping' => $this->shipping,
-            'tax' => $this->tax,
-            'items' => $this->items,
+            'purchase'=>['actionField'=>['id'=>$this->transactionId,'revenue'=>'555555'],'products' => $this->items],
         ];
     }
 }
