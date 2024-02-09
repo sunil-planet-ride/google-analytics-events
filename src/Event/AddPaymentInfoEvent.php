@@ -44,11 +44,11 @@ class AddPaymentInfoEvent extends GenericEvent implements ItemsAware
     protected function getParameterMapping(): array
     {
         return [
-            'currency' => $this->currency,
-            'value' => $this->value,
-            'coupon' => $this->coupon,
+            #'currency' => $this->currency,
+            #'value' => $this->value,
+            #'coupon' => $this->coupon,
             'payment_type' => $this->paymentType,
-            'items' => $this->items,
+            'products' => $this->items,
         ];
     }
 }
