@@ -230,7 +230,7 @@ class Item implements ParametersAware
         $parameters = array_filter([
             'item_id' => $this->itemId,
             'item_name' => $this->itemName,
-            'affiliation' => $this->affiliation,
+            #'affiliation' => $this->affiliation,
             'coupon' => $this->coupon,
             'currency' => $this->currency,
             'discount' => $this->discount,
