@@ -21,15 +21,16 @@ class ViewItemListEvent extends GenericEvent implements ItemsAware
 
     public static function getName(): string
     {
-        return 'view_item_list';
+        return 'impression';
     }
 
     protected function getParameterMapping(): array
     {
-        return [
-            'item_list_id' => $this->itemListId,
-            'item_list_name' => $this->itemListName,
-            'items' => $this->items,
-        ];
+        return array(
+            'currencyCode' => 'EUR',
+            'impressions' => $this->items,
+            #'item_list_id' => $this->itemListId,
+            #'item_list_name' => $this->itemListName,
+        );
     }
 }
