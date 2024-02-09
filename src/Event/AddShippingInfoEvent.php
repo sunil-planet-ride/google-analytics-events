@@ -44,11 +44,11 @@ class AddShippingInfoEvent extends GenericEvent implements ItemsAware
     protected function getParameterMapping(): array
     {
         return [
-            'currency' => $this->currency,
-            'value' => $this->value,
-            'coupon' => $this->coupon,
-            'shipping_tier' => $this->shippingTier,
-            'items' => $this->items,
+            #'currency' => $this->currency,
+            #'value' => $this->value,
+            #'coupon' => $this->coupon,
+            #'shipping_tier' => $this->shippingTier,
+            'products' => $this->items,
         ];
     }
 }
