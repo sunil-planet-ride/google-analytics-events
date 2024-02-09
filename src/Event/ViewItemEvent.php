@@ -11,7 +11,7 @@ use Setono\GoogleAnalyticsEvents\Event\Traits\HasValue;
 
 class ViewItemEvent extends GenericEvent implements ItemsAware
 {
-    public const NAME = 'view_item';
+    public const NAME = 'detail';
 
     use CreatesEmpty;
 
@@ -23,15 +23,13 @@ class ViewItemEvent extends GenericEvent implements ItemsAware
 
     public static function getName(): string
     {
-        return 'view_item';
+        return 'detail';
     }
 
     protected function getParameterMapping(): array
     {
-        return [
-            'currency' => $this->currency,
-            'value' => $this->value,
-            'items' => $this->items,
-        ];
+        return array(
+            'detail' => ['products'=>$this->items]
+    );
     }
 }
