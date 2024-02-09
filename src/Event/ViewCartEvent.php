@@ -27,9 +27,9 @@ class ViewCartEvent extends GenericEvent implements ItemsAware
     protected function getParameterMapping(): array
     {
         return [
-            'currency' => $this->currency,
-            'value' => $this->value,
-            'items' => $this->items,
+            #'currency' => $this->currency,
+            #'value' => $this->value,
+            'Products' => $this->items,
         ];
     }
 }
